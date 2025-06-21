@@ -3,82 +3,84 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import home from "../assets/projects/auto-service/Home.png";
-import history from "../assets/projects/auto-service/History.png";
-import report from "../assets/projects/auto-service/Report.png";
-
-const projectData = [
-  {
-    id: 1,
-    title: "Auto Service Management",
-    description:
-      "A full-featured system for managing repair data, notifying customers, and generating reports.",
-    images: [home, history, report],
-    link: "/projects/auto-service",
-  },
-];
-
-const CustomPrevArrow = ({ onClick }) => (
-  <button
-    className="absolute z-10 left-2 top-1/2 transform -translate-y-1/2 bg-white rounded-full shadow p-1"
-    onClick={onClick}
-    aria-label="Previous Slide"
-  >
-    <ChevronLeft size={20} />
-  </button>
-);
-
-const CustomNextArrow = ({ onClick }) => (
-  <button
-    className="absolute z-10 right-2 top-1/2 transform -translate-y-1/2 bg-white rounded-full shadow p-1"
-    onClick={onClick}
-    aria-label="Next Slide"
-  >
-    <ChevronRight size={20} />
-  </button>
-);
-
-const ProjectCarousel = ({ images, title }) => {
-  const sliderRef = useRef(null);
-
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    autoplay: false,
-    autoplaySpeed: 1200,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: true,
-    prevArrow: <CustomPrevArrow />,
-    nextArrow: <CustomNextArrow />,
-  };
-
-  return (
-    <div
-      onMouseEnter={() => sliderRef.current?.slickPlay()}
-      onMouseLeave={() => sliderRef.current?.slickPause()}
-    >
-      <Slider ref={sliderRef} {...settings}>
-        {images.map((img, index) => (
-          <div
-            key={index}
-            className="h-60 p-4 flex items-center justify-center rounded-lg"
-          >
-            <img
-              src={img}
-              alt={`${title} image ${index + 1}`}
-              loading="lazy"
-              className="h-full max-w-full object-contain object-center"
-            />
-          </div>
-        ))}
-      </Slider>
-    </div>
-  );
-};
+import auto1 from "../assets/projects/auto-service/Home.png";
+import auto2 from "../assets/projects/auto-service/History.png";
+import auto3 from "../assets/projects/auto-service/Report.png";
 
 const Projects = () => {
+  const projectData = [
+    {
+      id: 1,
+      title: "Auto Service Management",
+      description:
+        "A full-featured system for managing repair data, notifying customers, and generating reports.",
+      images: [auto1, auto2, auto3],
+      link: "/projects/auto-service",
+    },
+  ];
+
+  const CustomPrevArrow = ({ onClick }) => (
+    <button
+      className="absolute z-10 left-2 top-1/2 transform -translate-y-1/2 bg-white rounded-full shadow p-1 
+               hover:bg-blue-500 hover:text-white cursor-pointer transition-colors duration-300"
+      onClick={onClick}
+      aria-label="Previous Slide"
+    >
+      <ChevronLeft size={20} />
+    </button>
+  );
+
+  const CustomNextArrow = ({ onClick }) => (
+    <button
+      className="absolute z-10 right-2 top-1/2 transform -translate-y-1/2 bg-white rounded-full shadow p-1 
+               hover:bg-blue-500 hover:text-white cursor-pointer transition-colors duration-300"
+      onClick={onClick}
+      aria-label="Next Slide"
+    >
+      <ChevronRight size={20} />
+    </button>
+  );
+
+  const ProjectCarousel = ({ images, title }) => {
+    const sliderRef = useRef(null);
+
+    const settings = {
+      dots: true,
+      infinite: true,
+      speed: 500,
+      autoplay: false,
+      autoplaySpeed: 1200,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: true,
+      prevArrow: <CustomPrevArrow />,
+      nextArrow: <CustomNextArrow />,
+    };
+
+    return (
+      <div
+        onMouseEnter={() => sliderRef.current?.slickPlay()}
+        onMouseLeave={() => sliderRef.current?.slickPause()}
+      >
+        <Slider ref={sliderRef} {...settings}>
+          {images.map((img, index) => (
+            <div
+              key={index}
+              className="aspect ratio p-4 flex items-center justify-center rounded-lg"
+            >
+              <img
+                src={img}
+                alt={`${title} image ${index + 1}`}
+                loading="lazy"
+                className="h-full max-w-full object-contain object-center"
+              />
+            </div>
+          ))}
+        </Slider>
+      </div>
+    );
+  };
+
   return (
     <section id="project">
       <div className="min-h-screen bg-gradient-to-b from-white to-secondary py-12 px-4 sm:px-6 lg:px-8">

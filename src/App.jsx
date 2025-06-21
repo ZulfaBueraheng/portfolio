@@ -5,6 +5,7 @@ import About from "./components/About";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 import AutoService from "./projects/AutoService";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -22,6 +23,7 @@ function App() {
               <Experience />
               <Projects />
               <Contact />
+              <Footer />
             </main>
           </>
         } />
