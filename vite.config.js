@@ -5,10 +5,15 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   base: '/',
   plugins: [react(), tailwindcss()],
-   build: {
+  build: {
+    target: 'esnext',
+    minify: 'esbuild',
     rollupOptions: {
       output: {
-        format: 'es'
+        format: 'es',
+        entryFileNames: 'assets/[name]-[hash].js',
+        chunkFileNames: 'assets/[name]-[hash].js',
+        assetFileNames: 'assets/[name]-[hash].[ext]'
       }
     }
   }
