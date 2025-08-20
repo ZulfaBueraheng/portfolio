@@ -3,11 +3,13 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import auto1 from "../assets/projects/auto-service/Home.png";
-import auto2 from "../assets/projects/auto-service/History.png";
-import auto3 from "../assets/projects/auto-service/Report.png";
+import HomeImage from "../assets/projects/auto-service/Home.png";
+import RepairImage from "../assets/projects/auto-service/History.png";
+import ReportImage from "../assets/projects/auto-service/Report.png";
 
 const AutoService = () => {
+  const images = [HomeImage, RepairImage, ReportImage];
+
   const CustomPrevArrow = ({ onClick }) => (
     <button
       className="absolute z-10 left-2 top-1/2 transform -translate-y-1/2 bg-white rounded-full shadow p-1 
@@ -30,69 +32,84 @@ const AutoService = () => {
     </button>
   );
 
+  const sliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    prevArrow: <CustomPrevArrow />,
+    nextArrow: <CustomNextArrow />,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    adaptiveHeight: true,
+    arrows: true,
+  };
+
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="bg-white shadow-sm">
-        <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+        <div
+          className="max-w-6xl mx-auto
+                px-4 sm:px-6 lg:px-8 
+                py-2 sm:py-3 md:py-4 
+                flex items-center justify-between"
+        >
           <Link
             to="/"
-            className="text-blue-600 hover:text-blue-800 flex items-center"
+            className="text-black hover:text-blue-800 
+               flex items-center gap-1 sm:gap-2
+               text-sm sm:text-base md:text-lg
+               font-medium
+               transition-all duration-200
+               hover:scale-105 transform
+              "
           >
-            ← Back to Portfolio
+            <span className="text-base sm:text-lg md:text-xl">←</span>
+            <span className="hidden sm:inline">Back to Portfolio</span>
+            <span className="sm:hidden">Back</span>
           </Link>
-          <h1 className="text-2xl font-bold text-gray-800">
-            Auto Service Management System
-          </h1>
         </div>
       </div>
 
-      <div className="max-w-6xl mx-auto px-6 py-12">
-        <div>
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden mb-12">
-            <Slider
-              dots={true}
-              infinite={true}
-              speed={500}
-              slidesToShow={1}
-              slidesToScroll={1}
-              autoplay={true}
-              autoplaySpeed={3000}
-              prevArrow={<CustomPrevArrow />}
-              nextArrow={<CustomNextArrow />}
+      <div className="max-w-6xl mx-auto p-6">
+        <div
+          className="
+               "
+        >
+          <div className="text-center text-gray-700 max-w-6xl mx-auto">
+            <h2
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 
+                   font-bold mb-2 sm:mb-3 md:mb-4 lg:mb-6
+                   leading-tight"
             >
-              <div>
-                <img
-                  src={auto1}
-                  alt="Dashboard"
-                  className="w-full h-96 object-cover rounded-lg"
-                />
-              </div>
-              <div>
-                <img
-                  src={auto2}
-                  alt="Repair Form"
-                  className="w-full h-96 object-cover rounded-lg"
-                />
-              </div>
-              <div>
-                <img
-                  src={auto3}
-                  alt="Reports"
-                  className="w-full h-96 object-cover rounded-lg"
-                />
-              </div>
-            </Slider>
-          </div>
-        </div>
-        <div className="h-45 bg-gradient-to-r from-purple-500 to-blue-600 flex items-center justify-center mb-12">
-          <div className="text-center text-white">
-            <h2 className="text-4xl font-bold mb-4">Auto Service Management</h2>
-            <p className="text-xl opacity-90">
+              Auto Service Management
+            </h2>
+            <p
+              className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 
+                  opacity-90 
+                  max-w-2xl mx-auto
+                  px-4 sm:px-0"
+            >
               Web Application for Auto Repair Businesses
             </p>
           </div>
         </div>
-
+        <div className="relative w-full max-w-7xl mx-auto mt-6 mb-10 px-0">
+          <Slider {...sliderSettings}>
+            {images.map((img, index) => (
+              <div key={index} className="px-2 sm:px-3 lg:px-4">
+                <img
+                  src={img}
+                  alt={`Slide ${index + 1}`}
+                  className="rounded-xl w-full h-auto object-contain
+                     max-h-[300px] sm:max-h-[400px] md:max-h-[500px] lg:max-h-[600px]
+                     shadow-lg hover:shadow-xl transition-shadow duration-300"
+                />
+              </div>
+            ))}
+          </Slider>
+        </div>
         <div className="grid lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2 space-y-8">
             <div className="bg-white rounded-lg shadow-md p-8">

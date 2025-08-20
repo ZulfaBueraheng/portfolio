@@ -2,8 +2,9 @@ const Home = () => {
   return (
     <section
       id="home"
-      className="bg-primary text-white px-6 py-20 min-h-screen flex items-center justify-center"
+      className="bg-primary text-white px-22 sm:px-22 md:px-22 lg:px-12 py-20 min-h-screen flex items-center justify-center"
     >
+      
       <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <div className="text-center md:text-left">
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold mb-4">
