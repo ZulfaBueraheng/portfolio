@@ -2,19 +2,20 @@ const About = () => {
   return (
     <section
       id="about"
-      className="px-4 sm:px-6 lg:px-8 py-16 bg-gray-50 min-h-screen"
+      className="xl:min-h-screen py-14 sm:py-16 lg:pt-20 px-10 sm:px-15 md:px-6 xl:px-8 bg-[#F2F5F8]"
     >
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-3xl sm:text-4xl font-bold mb-4">ABOUT ME</h2>
-        <div className="w-20 h-1 bg-secondary rounded-full mx-auto mb-6"></div>
-        <p className="text-gray-600 mb-10 leading-relaxed max-w-3xl mx-auto text-base sm:text-lg">
+        <h2 className="text-xl sm:text-2xl md:text-3xl xl:text-4xl font-bold py-2 xl:py-4">
+          ABOUT ME
+        </h2>
+        <p className="text-xs sm:text-sm md:text-base xl:text-lg text-gray-600 leading-relaxed mb-4 sm:mb-6 xl:mb-12 max-w-xl md:max-w-2xl lg:max-w-3xl mx-auto">
           Here you will find more information about me, what I do, and my
           current skills mostly in terms of programming and technology.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 text-left">
-          <div className="" style={{ textIndent: "2rem" }}>
-            <p className="text-gray-700 mb-6 leading-relaxed text-base sm:text-lg">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-0 lg:gap-10 text-left">
+          <div className="indent-8 text-sm sm:text-base xl:text-lg text-gray-700 text-justify lg:leading-relaxed">
+            <p className="mb-2 sm:mb-3 lg:mb-6">
               I’m a Full Stack Developer who enjoys turning complex problems
               into simple, intuitive solutions. With experience building both
               the user interface and backend logic, I take pride in delivering
@@ -22,7 +23,7 @@ const About = () => {
               and reliable.
             </p>
 
-            <p className="text-gray-700 mb-6 leading-relaxed text-base sm:text-lg">
+            <p className="mb-2 sm:mb-3 lg:mb-6">
               I enjoy exploring new technologies and constantly challenge myself
               to improve both in code and in the way I think about product
               design and user experience. I believe great software is built
@@ -30,24 +31,19 @@ const About = () => {
               detail.
             </p>
 
-            <p className="text-gray-700 mb-8 leading-relaxed text-base sm:text-lg">
+            <p className="mb-2 sm:mb-3 lg:mb-6">
               I’m open to job opportunities where I can contribute, learn, and
               grow. If you have a good opportunity that matches my skills and
               experience, please don’t hesitate to contact me.
             </p>
-
-            <a
-              href="#contact"
-              className="bg-primary hover:bg-green-700 text-white px-6 py-2 rounded-full font-semibold transition-colors"
-            >
-              CONTACT
-            </a>
           </div>
 
-          <div className="space-y-8">
+          <div className="md:pl-10 lg:pl-0 space-y-6 lg:space-y-8">
             <div>
-              <h3 className="font-semibold mb-3 text-lg">Frontend Skills</h3>
-              <div className="flex flex-wrap gap-2">
+              <h3 className="text-base xl:text-lg font-semibold mb-2 xl:mb-3">
+                Frontend Skills
+              </h3>
+              <div className="flex flex-wrap gap-2 ">
                 {[
                   "JavaScript",
                   "React",
@@ -63,7 +59,7 @@ const About = () => {
                 ].map((skill) => (
                   <span
                     key={skill}
-                    className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm"
+                    className="text-xs sm:text-sm text-white bg-secondary px-3 py-1 rounded-full"
                   >
                     {skill}
                   </span>
@@ -72,12 +68,14 @@ const About = () => {
             </div>
 
             <div>
-              <h3 className="font-semibold mb-3 text-lg">Backend Skills</h3>
+              <h3 className="text-base xl:text-lg font-semibold mb-2 xl:mb-3">
+                Backend Skills
+              </h3>
               <div className="flex flex-wrap gap-2">
                 {["Node.js", "Express.js", "MongoDB"].map((skill) => (
                   <span
                     key={skill}
-                    className="bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-sm"
+                    className="text-xs sm:text-sm text-white bg-primary px-3 py-1 rounded-full"
                   >
                     {skill}
                   </span>
@@ -86,13 +84,15 @@ const About = () => {
             </div>
 
             <div>
-              <h3 className="font-semibold mb-3 text-lg">Tools & Others</h3>
+              <h3 className="text-base xl:text-lg font-semibold mb-2 xl:mb-3">
+                Tools & Others
+              </h3>
               <div className="flex flex-wrap gap-2">
                 {["Git", "Github", "Figma", "LINE Messaging API"].map(
                   (tool) => (
                     <span
                       key={tool}
-                      className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm"
+                      className="text-xs sm:text-sm text-white bg-[#6D5C55] px-3 py-1 rounded-full"
                     >
                       {tool}
                     </span>

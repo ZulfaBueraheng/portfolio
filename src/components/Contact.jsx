@@ -85,43 +85,83 @@ const Contact = () => {
   ];
 
   return (
-    <section
-      id="contact"
-      className="py-20 bg-gradient-to-b from-secondary to-tertiaty"
-    >
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-4">
+    <section id="contact" className="relative overflow-hidden bg-gray-50">
+      <div className="absolute inset-0 z-0">
+        <div className="w-720 sm:w-700 md:w-680 lg:w-400 xl:w-420 2xl:w-full">
+          <svg
+            width="100%"
+            height="100%"
+            id="svg"
+            viewBox="0 0 1440 690"
+            xmlns="http://www.w3.org/2000/svg"
+            className="w-full h-auto  transition duration-300 ease-in-out delay-150"
+          >
+            <path
+              d="M 0,700 L 0,131 C 99.17857142857142,129.46428571428572 198.35714285714283,127.92857142857142 315,140 C 431.64285714285717,152.07142857142858 565.75,177.75000000000003 682,170 C 798.25,162.24999999999997 896.6428571428571,121.07142857142857 1020,109 C 1143.357142857143,96.92857142857143 1291.6785714285716,113.96428571428572 1440,131 L 1440,700 L 0,700 Z"
+              stroke="none"
+              strokeWidth="0"
+              fill="#4a698a"
+              fillOpacity="0.4"
+              className="transition-all duration-300 ease-in-out delay-150 path-0"
+              transform="rotate(-180 720 350)"
+            ></path>
+            <path
+              d="M 0,700 L 0,306 C 115.39285714285714,266.92857142857144 230.78571428571428,227.85714285714283 338,250 C 445.2142857142857,272.14285714285717 544.25,355.50000000000006 670,359 C 795.75,362.49999999999994 948.2142857142858,286.1428571428571 1081,264 C 1213.7857142857142,241.8571428571429 1326.892857142857,273.92857142857144 1440,306 L 1440,700 L 0,700 Z"
+              stroke="none"
+              strokeWidth="0"
+              fill="#4a698a"
+              fillOpacity="0.53"
+              className="transition-all duration-300 ease-in-out delay-150 path-1"
+              transform="rotate(-180 720 350)"
+            ></path>
+            <path
+              d="M 0,700 L 0,481 C 117.5,460.75 235,440.5 352,432 C 469,423.5 585.4999999999999,426.75000000000006 715,425 C 844.5000000000001,423.24999999999994 987,416.50000000000006 1110,425 C 1233,433.49999999999994 1336.5,457.25 1440,481 L 1440,700 L 0,700 Z"
+              stroke="none"
+              strokeWidth="0"
+              fill="#4a698a"
+              fillOpacity="1"
+              className="transition-all duration-300 ease-in-out delay-150 path-2"
+              transform="rotate(-180 720 350)"
+            ></path>
+          </svg>
+        </div>
+      </div>
+
+      <div className="relative z-10 max-w-6xl mx-auto px-5 sm:px-10 h-auto py-24">
+        <div className="text-center mb-4 lg:mb-8">
+          <h2 className="text-xl sm:text-2xl md:text-3xl xl:text-4xl font-bold text-white mb-4">
             CONTACT
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mx-auto mb-6"></div>
+          <div className="w-20 h-1 xl:h-2 bg-secondary rounded-full mx-auto"></div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Info */}
-          <div className="space-y-8">
-            <h3 className="text-2xl font-semibold text-gray-800 mb-6">
+          <div className="">
+            <h3 className="text-lg sm:text-xl xl:text-2xl font-semibold text-white mb-6">
               Contact Information
             </h3>
-            <div className="space-y-6">
+            <div className="space-y-6 text-sm sm:text-base">
               {contactInfo.map((item, index) => (
                 <a
                   key={index}
                   href={item.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center space-x-4 p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105 group"
+                  className="flex items-center space-x-4 p-4 bg-white rounded-lg shadow-md transform transition-all duration-300 hover:scale-105 hover:shadow-lg group"
                 >
-                  <div className="text-blue-600 group-hover:text-purple-600 transition-colors duration-300">
+                  <div className="transition-colors duration-300 group-hover:text-secondary">
                     {item.icon}
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-800">{item.title}</h4>
+                    <h4 className="font-semibold text-gray-800">
+                      {item.title}
+                    </h4>
                     <p className="text-gray-600">{item.info}</p>
                   </div>
                   <ExternalLink
                     size={16}
-                    className="text-gray-400 group-hover:text-blue-600 ml-auto"
+                    className="text-gray-400 ml-auto group-hover:text-secondary"
                   />
                 </a>
               ))}
@@ -129,17 +169,17 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-white p-8 rounded-2xl shadow-xl">
-            <h3 className="text-2xl font-semibold text-gray-800 mb-6">
+          <div className="p-6 sm:p-8 bg-white rounded-2xl shadow-xl">
+            <h3 className="text-lg sm:text-xl xl:text-2xl font-semibold text-gray-800 mb-6">
               Send Me a Message
             </h3>
             <form onSubmit={handleSubmit}>
-              <div className="space-y-6">
+              <div className="space-y-4 text-sm sm:text-base">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label
                       htmlFor="name"
-                      className="block text-sm font-medium text-gray-700 mb-2"
+                      className="block font-medium text-gray-700 mb-2"
                     >
                       <User size={16} className="inline mr-2" />
                       Name
@@ -151,14 +191,14 @@ const Contact = () => {
                       value={formData.name}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg transition-all duration-200 focus:ring-2 focus:ring-primary focus:border-transparent"
                       placeholder="Enter your name"
                     />
                   </div>
                   <div>
                     <label
                       htmlFor="email"
-                      className="block text-sm font-medium text-gray-700 mb-2"
+                      className="block font-medium text-gray-700 mb-2"
                     >
                       <Mail size={16} className="inline mr-2" />
                       Email
@@ -170,7 +210,7 @@ const Contact = () => {
                       value={formData.email}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg transition-all duration-200 focus:ring-2 focus:ring-primary focus:border-transparent"
                       placeholder="your.email@example.com"
                     />
                   </div>
@@ -179,7 +219,7 @@ const Contact = () => {
                 <div>
                   <label
                     htmlFor="subject"
-                    className="block text-sm font-medium text-gray-700 mb-2"
+                    className="block font-medium text-gray-700 mb-2"
                   >
                     <MessageSquare size={16} className="inline mr-2" />
                     Subject
@@ -191,7 +231,7 @@ const Contact = () => {
                     value={formData.subject}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg transition-all duration-200 focus:ring-2 focus:ring-primary focus:border-transparent"
                     placeholder="Subject of your inquiry"
                   />
                 </div>
@@ -199,7 +239,7 @@ const Contact = () => {
                 <div>
                   <label
                     htmlFor="message"
-                    className="block text-sm font-medium text-gray-700 mb-2"
+                    className="block font-medium text-gray-700 mb-2"
                   >
                     Message
                   </label>
@@ -210,7 +250,7 @@ const Contact = () => {
                     onChange={handleInputChange}
                     required
                     rows={6}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 resize-none"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg resize-none transition-all duration-200 focus:ring-2 focus:ring-primary focus:border-transparent"
                     placeholder="Write your message here..."
                   />
                 </div>
@@ -218,10 +258,10 @@ const Contact = () => {
                 <button
                   type="submit"
                   disabled={isSubmitted}
-                  className={`w-full py-3 px-6 rounded-lg font-medium transition-all duration-300 flex items-center justify-center space-x-2 ${
+                  className={`w-full py-3 px-6 flex items-center justify-center space-x-2 font-medium rounded-lg transition-all duration-300 ${
                     isSubmitted
                       ? "bg-green-500 text-white cursor-not-allowed"
-                      : "bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 hover:shadow-lg"
+                      : "text-white bg-gradient-to-r from-accent to-[#88A1BF] transform hover:scale-105 hover:shadow-lg hover:from-secondary hover:to-[#9D4345]"
                   }`}
                 >
                   {isSubmitted ? (

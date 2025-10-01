@@ -21,8 +21,8 @@ const Projects = () => {
 
   const CustomPrevArrow = ({ onClick }) => (
     <button
-      className="absolute z-10 left-2 top-1/2 transform -translate-y-1/2 bg-white rounded-full shadow p-1 
-               hover:bg-blue-500 hover:text-white cursor-pointer transition-colors duration-300"
+      className="absolute left-2 top-1/2 z-10 transform -translate-y-1/2 p-1 bg-white rounded-full shadow 
+            cursor-pointer transition-colors duration-300 hover:bg-secondary hover:text-white"
       onClick={onClick}
       aria-label="Previous Slide"
     >
@@ -32,8 +32,8 @@ const Projects = () => {
 
   const CustomNextArrow = ({ onClick }) => (
     <button
-      className="absolute z-10 right-2 top-1/2 transform -translate-y-1/2 bg-white rounded-full shadow p-1 
-               hover:bg-blue-500 hover:text-white cursor-pointer transition-colors duration-300"
+      className="absolute right-2 top-1/2 z-10 transform -translate-y-1/2 p-1 bg-white rounded-full shadow 
+            cursor-pointer transition-colors duration-300 hover:bg-secondary hover:text-white"
       onClick={onClick}
       aria-label="Next Slide"
     >
@@ -66,7 +66,7 @@ const Projects = () => {
           {images.map((img, index) => (
             <div
               key={index}
-              className="aspect ratio p-4 flex items-center justify-center rounded-lg"
+              className="flex items-center justify-center p-4 aspect-ratio rounded-lg"
             >
               <img
                 src={img}
@@ -82,35 +82,41 @@ const Projects = () => {
   };
 
   return (
-    <section id="project">
-      <div className="min-h-screen bg-gradient-to-b from-white to-secondary py-12 px-4 sm:px-6 lg:px-8">
+    <section id="projects">
+      <div className="h-auto py-24 px-4 sm:px-6 lg:px-8 bg-primary">
         <div className="max-w-6xl mx-auto">
-          <h1 className="text-3xl sm:text-4xl font-bold text-center mb-12 text-primary">
+          <h1 className="text-xl sm:text-2xl md:text-3xl xl:text-4xl font-bold text-white text-center mb-6 sm:mb-12">
             PROJECTS
           </h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {projectData.map((project) => (
               <div
                 key={project.id}
-                className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-transform duration-300 transform hover:-translate-y-1 hover:scale-[1.02]"
+                className="bg-white pt-4 rounded-2xl overflow-hidden shadow-md transform transition-transform duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-xl"
               >
                 <ProjectCarousel
                   images={project.images}
                   title={project.title}
                 />
-                <div className="p-5 sm:p-6">
-                  <h3 className="text-lg sm:text-xl font-semibold mb-2 text-gray-800">
+                <div className="px-5 py-6 sm:px-6 sm:py-8">
+                  <h3 className="text-base sm:text-lg xl:text-xl font-semibold text-gray-800 mb-2">
                     {project.title}
                   </h3>
-                  <p className="text-gray-600 text-sm sm:text-base mb-4 leading-relaxed">
+                  <p className="text-sm sm:text-base text-gray-600 leading-relaxed mb-2">
                     {project.description}
                   </p>
-                  <a
-                    href={project.link}
-                    className="inline-block bg-primary text-white px-4 py-2 rounded-md hover:bg-blue-700 transition duration-300 text-sm sm:text-base"
-                  >
-                    View Project
-                  </a>
+                  <div className="flex justify-end">
+                    <a
+                      href={project.link}
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-sm sm:text-base px-4 py-2 text-white bg-accent rounded-full transition duration-300 hover:bg-secondary"
+                    >
+                      Project Detail
+                      <span className="text-lg material-symbols-outlined">
+                        arrow_circle_right
+                      </span>
+                    </a>
+                  </div>
                 </div>
               </div>
             ))}

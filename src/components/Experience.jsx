@@ -1,110 +1,90 @@
+const experiences = [
+  {
+    role: "Auto Service Management System",
+    company: "Prince of Songkla University",
+    date: "July 2023 - March 2024",
+    description: [
+      "Designed and developed a web application for managing auto service businesses.",
+      "Features included repair data recording, repair history access, and summary report generation.",
+      "Integrated LINE Messaging API to notify customers of repair status updates.",
+      "Built a fully responsive design for optimal usability across devices.",
+    ],
+    tech: [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Javascript",
+      "HTML",
+      "SCSS",
+      "Material UI",
+      "Bootstrap",
+      "LINE Messaging API",
+      "Figma",
+    ],
+  },
+  {
+    role: "Programmer (Intern)",
+    company: "Phuket Innovative Development CO., LTD.",
+    date: "April 2023 - June 2023",
+    description: [
+      "Developed an eCommerce website, including Home, About, Products, Blog, and Contact pages.",
+      "Integrated multilingual support with seamless language switching.",
+      "Ensured responsive design for a better user experience across different devices.",
+    ],
+    tech: ["React.js", "Javascript", "HTML", "SCSS"],
+  },
+];
+
 const Experience = () => {
   return (
     <section
       id="experience"
-      className="px-4 sm:px-6 py-16 sm:py-20 min-h-screen bg-white"
+      className="xl:min-h-screen py-14 sm:py-16 xl:pt-24 bg-white"
     >
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 sm:mb-16">
+      <div className="px-6 sm:px-0 sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-5xl mx-auto">
+        <h2 className="text-xl sm:text-2xl md:text-3xl xl:text-4xl font-bold text-center py-2 xl:py-4 mb-4 sm:mb-6 lg:mb-8 xl:mb-14">
           EXPERIENCE
         </h2>
 
-        <div className="space-y-12">
-          <div className="border-l-4 border-primary pl-4 sm:pl-8">
-            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2 gap-2">
-              <div>
-                <h3 className="text-lg sm:text-xl font-bold">
-                  Auto Service Management System
-                </h3>
-                <p className="text-primary font-semibold text-sm sm:text-base">
-                  Prince of Songkla University
-                </p>
-              </div>
-              <span className="text-gray-500 text-sm">
-                July 2023 - March 2024
-              </span>
-            </div>
-            <ul className="text-gray-700 mb-4 space-y-1 text-sm sm:text-base leading-relaxed">
-              <li>
-                • Designed and developed a web application for managing auto
-                service businesses.
-              </li>
-              <li>
-                • Features included repair data recording, repair history
-                access, and summary report generation.
-              </li>
-              <li>
-                • Integrated LINE Messaging API to notify customers of repair
-                status updates.
-              </li>
-              <li>
-                • Built a fully responsive design for optimal usability across
-                devices.
-              </li>
-            </ul>
-            <div className="flex flex-wrap gap-2">
-              {[
-                "React.js",
-                "Node.js",
-                "Express.js",
-                "MongoDB",
-                "Javascript",
-                "HTML",
-                "SCSS",
-                "Material UI",
-                "Bootstrap",
-                "LINE Messaging API",
-                "Figma",
-              ].map((tech, idx) => (
-                <span
-                  key={idx}
-                  className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs sm:text-sm"
-                >
-                  {tech}
+        <div className="space-y-8 sm:space-y-12">
+          {experiences.map((exp, idx) => (
+            <div
+              key={idx}
+              className="border-l-3 sm:border-l-4 border-primary pl-4 sm:pl-6 lg:pl-8"
+            >
+              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2 gap-2">
+                <div>
+                  <h3 className="text-base sm:text-lg xl:text-xl font-bold">
+                    {exp.role}
+                  </h3>
+                  <p className="text-sm lg:text-base font-semibold text-primary">
+                    {exp.company}
+                  </p>
+                </div>
+                <span className="text-sm lg:text-base text-gray-500">
+                  {exp.date}
                 </span>
-              ))}
-            </div>
-          </div>
+              </div>
 
-          <div className="border-l-4 border-primary pl-4 sm:pl-8">
-            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2 gap-2">
-              <div>
-                <h3 className="text-lg sm:text-xl font-bold">
-                  Programmer (Intern)
-                </h3>
-                <p className="text-primary font-semibold text-sm sm:text-base">
-                  Phuket Innovative Development CO., LTD.
-                </p>
+              <ul className="text-sm sm:text-base xl:text-lg text-gray-700 lg:leading-relaxed mb-3 lg:mb-4 space-y-1">
+                {exp.description.map((item, i) => (
+                  <li key={i}>• {item}</li>
+                ))}
+              </ul>
+
+              <div className="flex flex-wrap gap-2">
+                {exp.tech.map((tech, i) => (
+                  <span
+                    key={i}
+                    className="text-sm xl:text-base text-gray-700 bg-gray-100 px-3 py-1 rounded-full"
+                  >
+                    {tech}
+                  </span>
+                ))}
               </div>
-              <span className="text-gray-500 text-sm">
-                April 2023 - June 2023
-              </span>
             </div>
-            <ul className="text-gray-700 mb-4 space-y-1 text-sm sm:text-base leading-relaxed">
-              <li>
-                • Developed an eCommerce website, including Home, About,
-                Products, Blog, and Contact pages.
-              </li>
-              <li>
-                • Integrated multilingual support with seamless language
-                switching.
-              </li>
-              <li>
-                • Ensured responsive design for a better user experience across
-                different devices.
-              </li>
-            </ul>
-            <div className="flex flex-wrap gap-2">
-              {["React.js", "Javascript", "HTML", "SCSS"].map((tech, idx) => (
-                <span
-                  key={idx}
-                  className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs sm:text-sm"
-                >
-                  {tech}
-                </span>
-              ))}
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
