@@ -72,7 +72,7 @@ const Projects = () => {
                 src={img}
                 alt={`${title} image ${index + 1}`}
                 loading="lazy"
-                className="h-full max-w-full object-contain object-center"
+                className="h-full w-auto object-contain object-center"
               />
             </div>
           ))}

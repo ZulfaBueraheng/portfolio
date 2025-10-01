@@ -2,9 +2,9 @@ const Home = () => {
   return (
     <section
       id="home"
-      className="flex items-center justify-center h-screen  sm:h-[512px] md:h-[640px] xl:min-h-screen bg-[#e9ebed] bg-[url('data:image/svg+xml,%3Csvg%20width=%2764%27%20height=%2780%27%20viewBox=%270%200%2064%2080%27%20xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cg%20fill=%27%23dcdfe3%27%20fill-opacity=%270.4%27%20fill-rule=%27evenodd%27%3E%3Cpath%20d=%27M32%200v80L0%2040M64%200v40L32%200M64%2040v40H32%27/%3E%3C/g%3E%3C/svg%3E')] bg-repeat sm:bg-[#DCDFE3] md:bg-none text-white"
+      className="flex items-center justify-center h-screen  sm:h-[512px] lg:min-h-screen bg-[#e9ebed] bg-[url('data:image/svg+xml,%3Csvg%20width=%2764%27%20height=%2780%27%20viewBox=%270%200%2064%2080%27%20xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cg%20fill=%27%23dcdfe3%27%20fill-opacity=%270.4%27%20fill-rule=%27evenodd%27%3E%3Cpath%20d=%27M32%200v80L0%2040M64%200v40L32%200M64%2040v40H32%27/%3E%3C/g%3E%3C/svg%3E')] bg-repeat sm:bg-[#DCDFE3] md:bg-none text-white"
     >
-      <div className="absolute sm:-left-65 md:-left-75 lg:-left-85 xl:-left-65 sm:top-[256px] md:top-[320px] xl:top-1/2 -translate-y-1/2 mt-6 sm:h-100 md:h-120 lg:h-140 xl:h-160 sm:w-100 md:w-120 lg:w-140 xl:w-160 rounded-full bg-[#E9EBED]"></div>
+      <div className="absolute sm:-left-65 lg:-left-85 xl:-left-65 sm:top-[256px] lg:top-1/2 -translate-y-1/2 mt-6 sm:h-100 lg:h-140 xl:h-160 sm:w-100 md:w-120 lg:w-140 xl:w-160 rounded-full bg-[#E9EBED]"></div>
       <div className="absolute mt-12 lg:mt-6 px-10 sm:px-2 lg:px-10 xl:px-0 grid w-full max-w-6xl grid-cols-1 sm:grid-cols-2 items-center lg:gap-12">
         {/* Left Side */}
         <div className="sm:pl-10 lg:pl-16 xl:pl-0 text-center sm:text-left">
