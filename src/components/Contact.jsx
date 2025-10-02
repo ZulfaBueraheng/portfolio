@@ -138,10 +138,10 @@ const Contact = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Info */}
           <div className="">
-            <h3 className="text-lg sm:text-xl xl:text-2xl font-semibold text-white mb-6">
+            <h3 className="hidden lg:block lg:text-xl xl:text-2xl font-semibold text-white mb-6">
               Contact Information
             </h3>
-            <div className="space-y-6 text-sm sm:text-base">
+            <div className="space-y-6 text-sm sm:text-base mt-4 sm:mt-6 lg:mt-0">
               {contactInfo.map((item, index) => (
                 <a
                   key={index}
