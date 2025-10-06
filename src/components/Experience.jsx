@@ -1,6 +1,6 @@
 const experiences = [
   {
-    role: "Auto Service Management System",
+    role: "Auto Service Management System (Final Project)",
     company: "Prince of Songkla University",
     date: "July 2023 - March 2024",
     description: [
