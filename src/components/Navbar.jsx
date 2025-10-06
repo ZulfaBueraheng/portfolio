@@ -50,7 +50,7 @@ const Navbar = () => {
                 ${
                   active === item.href
                     ? "bg-secondary text-white"
-                    : "hover:bg-secondary hover:text-white"
+                    : "hover:text-secondary"
                 }`}
             >
               {item.label}
@@ -59,7 +59,7 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Toggle */}
-        <button className="md:hidden" onClick={toggleMenu}>
+        <button className="md:hidden cursor-pointer" onClick={toggleMenu}>
           {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </div>

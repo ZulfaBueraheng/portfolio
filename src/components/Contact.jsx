@@ -261,7 +261,7 @@ const Contact = () => {
                   className={`w-full py-3 px-6 flex items-center justify-center space-x-2 font-medium rounded-lg transition-all duration-300 ${
                     isSubmitted
                       ? "bg-green-500 text-white cursor-not-allowed"
-                      : "text-white bg-gradient-to-r from-accent to-[#88A1BF] transform hover:scale-105 hover:shadow-lg hover:from-secondary hover:to-[#9D4345]"
+                      : "text-white bg-gradient-to-r from-accent to-[#88A1BF] transform hover:scale-105 hover:shadow-lg hover:from-secondary hover:to-[#9D4345] cursor-pointer"
                   }`}
                 >
                   {isSubmitted ? (
