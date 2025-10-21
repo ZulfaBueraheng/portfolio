@@ -28,7 +28,7 @@ const experiences = [
     company: "Phuket Innovative Development CO., LTD.",
     date: "April 2023 - June 2023",
     description: [
-      "Developed eCommerce websites, including Home, About, Products, Blog, and Contact pages.",
+      "Developed business websites with multiple sections: Home, Welcome, About, Product, Gallery, Reference, Seller, Blog, Contact, and Footer.",
       "Integrated multilingual support with language switching.",
       "Implemented fully responsive design for seamless experience across desktop, tablet, and mobile.",
     ],
