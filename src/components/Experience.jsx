@@ -5,9 +5,9 @@ const experiences = [
     date: "July 2023 - March 2024",
     description: [
       "Designed and developed a web application for managing auto service businesses.",
-      "Features included repair data recording, repair history access, and summary report generation.",
+      "Implemented features for repair data recording, repair history access, and summary report generation.",
       "Integrated LINE Messaging API to notify customers of repair status updates.",
-      "Built a fully responsive design for optimal usability across devices.",
+      "Developed responsive layouts optimized for desktop and tablet devices.",
     ],
     tech: [
       "React.js",
@@ -28,9 +28,9 @@ const experiences = [
     company: "Phuket Innovative Development CO., LTD.",
     date: "April 2023 - June 2023",
     description: [
-      "Developed an eCommerce website, including Home, About, Products, Blog, and Contact pages.",
-      "Integrated multilingual support with seamless language switching.",
-      "Ensured responsive design for a better user experience across different devices.",
+      "Developed full-featured landing pages, including Home, About, Products, Blog, and Contact.",
+      "Integrated multilingual support with language switching.",
+      "Implemented fully responsive design for seamless experience across desktop, tablet, and mobile.",
     ],
     tech: ["React.js", "Javascript", "HTML", "SCSS"],
   },
