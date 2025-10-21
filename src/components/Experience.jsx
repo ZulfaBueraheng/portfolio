@@ -28,7 +28,7 @@ const experiences = [
     company: "Phuket Innovative Development CO., LTD.",
     date: "April 2023 - June 2023",
     description: [
-      "Developed full-featured landing pages, including Home, About, Products, Blog, and Contact.",
+      "Developed eCommerce websites, including Home, About, Products, Blog, and Contact pages.",
       "Integrated multilingual support with language switching.",
       "Implemented fully responsive design for seamless experience across desktop, tablet, and mobile.",
     ],
